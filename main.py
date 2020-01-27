@@ -3,7 +3,7 @@ import sys, random
 assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 
 quit = False
-range = 10
+range = 100
 
 while not quit:
     random_number = random.randint(1,range)
