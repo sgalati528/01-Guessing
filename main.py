@@ -7,16 +7,15 @@ range = 100
 
 while not quit:
     random_number = random.randint(1,range)
-    number = input("Please guess a number between 1 and {} : ".format(range))
-    number = int(number)
-    count = -1
+    count = 1
+    number = -1
     while number != random_number: 
         number =  input("Please guess a number between 1 and {} : ".format(range))  
-        number = int(number)
-        count = count + 1
         if not number.isdigit():
             print("Enter a number!") 
-        else:    
+        else:
+            number = int(number)
+            count = count + 1    
             print("Sorry, that's not it")
             if number > random_number:
                 print("Too high!")
